@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>McDonald's Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body >
+    <div class="container">
+        <h1 style="font-size: 40px; margin-bottom: 15px; ">QuickBite</h1>
+        <h1 style="margin-top:10px; "> The order management system</h1>
+
+        <div class="menu">
+            <div>
+                <i class="fa-solid fa-burger"></i>
+                <button onclick="showIngredients('Burger')">Burger</button>
+            </div>
+           <div>
+            <img src="sandwhich.png" style="height: 30px; margin-left:60px;" >
+            <button onclick="showIngredients('Sandwich')">Sandwich</button>
+           </div>
+           <div>
+            <i class="fa-solid fa-pizza-slice"></i>
+            <button onclick="showIngredients('Pizza')">Pizza</button>
+           </div>
+           <div>
+            <i class="fa-solid fa-bottle-water"></i>
+            <button onclick="showIngredients('Cold-drink')">Cold-drink</button>
+           </div>
+           <div>
+            <i class="fa-solid fa-hotdog"></i>
+            <button onclick="showIngredients('Hot-dog')">Hot-dog</button>
+           </div>
+        </div>
+
+        <h2>Customize Your Order</h2>
+        <div id="customizeSection">
+            <p>Select an item to customize!</p>
+        </div>
+
+        <button id="addOrderButton" onclick="addOrder()" style="display:none;">Add to Order Queue</button>
+
+        <h2>Order Queue</h2>
+        <div id="orderQueue">
+            <p>No orders in the queue.</p>
+        </div>
+
+        <h2>Order History</h2>
+        <div id="orderHistory">
+            <p>No orders have been served yet.</p>
+        </div>
+
+        <button onclick="serveNextOrder()">Serve Next Order</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
